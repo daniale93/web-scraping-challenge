@@ -14,25 +14,25 @@
   <div class="container-fluid">
     <div class="jumbotron text-center">
       <h1>Mission to Mars</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars</a></p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
    
     <div class="row">
         <div class="col-md-12" id="mars-news">
         <h2 style="font-size:30px; font-weight:bold">Latest Mars News</h2>
-        <h4>{{ mars.news_title }}</h4>
+        <h4 style="font-weight:bold">{{ mars.news_title }}</h4>
         <p>{{ mars.paragraph }}</p>
     </div>
 
     <div class="row">
-        <div class="col-md-8" id="feat-img">
-        <h2 align="center" style="font-size:30px; font-weight:bold">Mars Featured Image</h2>
+        <div class="col-md-6" id="feat-img">
+        <h2 align="center" style="font-size:30px; font-weight:bold">Featured Mars Image</h2>
         <img src="{{mars.image}}" class="img-featured" alt="Featured Mars Image" width= 800px height= 500px vspace= 10px hspace=80px >
         </div>
         <div class="col-md-4" id="mars-facts">
             <div class= "card border secondary">
                 <div class= "card body">
-                    <h3 class= "card title" style="font-size:25px; font-weight:bold">Mars Facts</h3>
+                    <h3 class= "card title" style="font-size:30px; font-weight:bold">Mars Facts</h3>
                     <p class= "card text"> 
                         {{ mars.facts | safe }}</p>
                 </div>
@@ -46,7 +46,7 @@
             {% for hemi in mars.hemisphere %}
                 <div class= "col-md-3">
                     <div class="thumbnail">
-                        <img class= "hem_image" src="{{hemi.img_url}}" width= 400px height= 400px>
+                        <img class= "hem_image" src="{{hemi.img_url}}" width= 450px height= 450px>
                         <div class= "card body">
                                 <b class= "card text"> {{ hemi.title }}</b>
                         </div>  
